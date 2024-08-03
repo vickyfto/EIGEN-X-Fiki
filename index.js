@@ -35,18 +35,16 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Arif Books Express API with Swagger",
+      title: "Heigen X fiki",
       version: "0.1.0",
-      description:
-        "This is a simple Book API application made with Express and documented with Swagger",
+      description: "API interview documentation",
       license: {
         name: "MIT",
         url: "https://spdx.org/licenses/MIT.html",
       },
       contact: {
-        name: "skills with arif",
-        url: "arif.com",
-        email: "info@email.com",
+        name: "Fiki Fitrio",
+        email: "vickyfitrio19@gmail.com or phone 087891505070",
       },
     },
     servers: [

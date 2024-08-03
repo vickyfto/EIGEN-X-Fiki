@@ -1,2 +1,3 @@
-# perkebunan-backend
-# EIGEN-X-Fiki
+## how to run the project
+
+## documentation swagger is here localhost:5000/api-docs
