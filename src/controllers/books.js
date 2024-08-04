@@ -56,14 +56,13 @@ const createBooks = async (req, res) => {
 };
 
 const returnBook = async (req, res) => {
-  const { code, borrowDate } = req.body;
+  const { code } = req.body;
 
   const getMember = await MemberModel.find({
     list_borrow_books: { $elemMatch: { code: code } },
   });
 
-  // when create date and send it from client should
-  // be hash to prevent manual request from hacker
+  const borrowDate = getMember[0].list_borrow_books[0].borrowedTime;
   const currentDate = new Date();
   const borrow = new Date(borrowDate);
   const addAweekFromBorrowDate = new Date(
@@ -91,7 +90,7 @@ const returnBook = async (req, res) => {
       console.log(err);
     }
   } else {
-    console.log("masuk else");
+    res.status(500).send({ message: "Server error" });
   }
 };
 
